@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import java.lang.String?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.layout.HBox?>
+<StackPane prefHeight="600" prefWidth="960" styleClass="blurred-gradient" stylesheets="/styles-compiled/settingsView.css" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="me.sunstorm.labyrinth.ui.controller.SettingsController">
+    <VBox alignment="TOP_CENTER" maxHeight="300" maxWidth="400" styleClass="modal-background">
+        <Label text="%settings.title" styleClass="title">
+            <styleClass>
+                <String fx:value="title"/>
+                <String fx:value="left-pad"/>
+            </styleClass>
+        </Label>
+        <HBox alignment="CENTER">
+            <Label text="%settings.language">
+                <styleClass>
+                    <String fx:value="padding-25" />
+                    <String fx:value="option" />
+                </styleClass>
+            </Label>
+            <ChoiceBox fx:id="languageChoice" />
+        </HBox>
+        <Button fx:id="menuButton" mnemonicParsing="false" onMouseClicked="#menuClicked" prefHeight="27.0" prefWidth="96.0" text="%navigation.back" styleClass="basic-button"/>
+    </VBox>
+</StackPane>

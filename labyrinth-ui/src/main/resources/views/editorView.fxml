@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<HBox prefHeight="600" prefWidth="960" styleClass="blurred-gradient" stylesheets="/styles-compiled/editorView.css" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="me.sunstorm.labyrinth.ui.controller.EditorController">
+   <GridPane>
+      <columnConstraints>
+         <ColumnConstraints hgrow="SOMETIMES" minWidth="200" />
+         <ColumnConstraints hgrow="SOMETIMES" minWidth="200" />
+         <ColumnConstraints hgrow="SOMETIMES" minWidth="200" />
+      </columnConstraints>
+      <rowConstraints>
+         <RowConstraints vgrow="ALWAYS" />
+      </rowConstraints>
+      <!-- Levels -->
+      <VBox alignment="TOP_CENTER" GridPane.columnIndex="0" GridPane.rowIndex="0">
+         <styleClass>
+            <String fx:value="pane-base" />
+            <String fx:value="list-content" />
+         </styleClass>
+         <Label styleClass="title" text="%editor.levels" />
+         <ScrollPane fx:id="scrollPane" hbarPolicy="NEVER" vbarPolicy="NEVER">
+            <styleClass>
+               <String fx:value="padding-b-20"/>
+               <String fx:value="hide-scroll-pane" />
+            </styleClass>
+            <VBox fx:id="levelsPane" />
+         </ScrollPane>
+         <Button fx:id="reloadButton" mnemonicParsing="false" onMouseClicked="#reloadClicked" prefHeight="46.0" styleClass="basic-button" text="%editor.reload" />
+      </VBox>
+      <!-- grid -->
+      <StackPane GridPane.columnIndex="1" GridPane.rowIndex="0">
+         <styleClass>
+            <String fx:value="main-content" />
+         </styleClass>
+         <GridPane fx:id="gridPane" maxHeight="400" maxWidth="400">
+            <columnConstraints>
+               <ColumnConstraints hgrow="SOMETIMES" minWidth="10" />
+               <ColumnConstraints hgrow="SOMETIMES" minWidth="10" />
+               <ColumnConstraints hgrow="SOMETIMES" minWidth="10" />
+               <ColumnConstraints hgrow="SOMETIMES" minWidth="10" />
+               <ColumnConstraints hgrow="SOMETIMES" minWidth="10" />
+               <ColumnConstraints hgrow="SOMETIMES" minWidth="10" />
+            </columnConstraints>
+            <rowConstraints>
+               <RowConstraints minHeight="10" vgrow="SOMETIMES" />
+               <RowConstraints minHeight="10" vgrow="SOMETIMES" />
+               <RowConstraints minHeight="10" vgrow="SOMETIMES" />
+               <RowConstraints minHeight="10" vgrow="SOMETIMES" />
+               <RowConstraints minHeight="10" vgrow="SOMETIMES" />
+               <RowConstraints minHeight="10" vgrow="SOMETIMES" />
+            </rowConstraints>
+         </GridPane>
+      </StackPane>
+      <!-- Controls -->
+      <VBox alignment="TOP_CENTER" GridPane.columnIndex="2" GridPane.rowIndex="0">
+         <styleClass>
+            <String fx:value="pane-base" />
+            <String fx:value="control-content" />
+         </styleClass>
+         <Label styleClass="title" text="%editor.properties" />
+         <VBox alignment="TOP_LEFT" styleClass="padding-x-20">
+            <Label text="%editor.level_name" styleClass="subtitle" />
+            <TextField fx:id="levelNameField" />
+         </VBox>
+         <VBox alignment="TOP_LEFT" styleClass="padding-20">
+            <Label text="%editor.edit" styleClass="subtitle" />
+            <RadioButton fx:id="wallPicker" text="%game.wall" styleClass="padding-t-10" selected="true" />
+            <RadioButton fx:id="playerPicker" text="%game.player" styleClass="padding-t-10" />
+            <RadioButton fx:id="monsterPicker" text="%game.monster" styleClass="padding-t-10" />
+         </VBox>
+         <Button fx:id="deleteButton" onMouseClicked="#onDeleteClicked" prefHeight="46.0" prefWidth="150" styleClass="delete-button" text="%editor.delete" />
+         <Label styleClass="padding-y-25"/>
+         <Button fx:id="menuButton" mnemonicParsing="false" onMouseClicked="#menuClicked" prefHeight="46.0" prefWidth="100.0" styleClass="basic-button" text="%navigation.back" />
+      </VBox>
+   </GridPane>
+</HBox>

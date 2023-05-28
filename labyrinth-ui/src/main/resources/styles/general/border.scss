@@ -1,0 +1,27 @@
+.border-none {
+    -fx-border-width: 0px;
+}
+
+.border-1 {
+    -fx-border-width: 1px;
+}
+
+.border-7 {
+    -fx-border-width: 7px;
+}
+
+.border-l-7 {
+    -fx-border-width: 0px 0px 0px 7px;
+}
+
+.border-r-7 {
+    -fx-border-width: 0px 7px 0px 0px;
+}
+
+.border-t-7 {
+    -fx-border-width: 7px 0px 0px 0px;
+}
+
+.border-b-7 {
+    -fx-border-width: 0px 0px 7px 0px;
+}

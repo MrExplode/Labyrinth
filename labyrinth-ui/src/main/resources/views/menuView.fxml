@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600" prefWidth="960" fx:controller="me.sunstorm.labyrinth.ui.controller.MenuController" styleClass="background-gradient" stylesheets="/styles-compiled/menuView.css" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1">
+    <VBox alignment="TOP_CENTER" maxHeight="300" maxWidth="230" prefHeight="150.0" prefWidth="200.0" styleClass="modal-background">
+        <Label styleClass="title" text="Labyrinth">
+         <VBox.margin>
+            <Insets top="30.0" bottom="30.0" />
+         </VBox.margin>
+        </Label>
+        <Button styleClass="menu-button" text="%menu.play" fx:id="playButton" onMouseClicked="#playClick">
+            <VBox.margin>
+                <Insets top="15.0" bottom="10.0" />
+            </VBox.margin>
+        </Button>
+        <Button styleClass="menu-button" text="%menu.level_editor" fx:id="editorButton" onMouseClicked="#editorClick">
+            <VBox.margin>
+                <Insets top="15.0" bottom="10.0" />
+            </VBox.margin>
+        </Button>
+        <Button styleClass="menu-button" text="%menu.settings" fx:id="settingsButton" onMouseClicked="#settingsClick">
+            <VBox.margin>
+                <Insets top="15.0" bottom="10.0" />
+            </VBox.margin>
+        </Button>
+    </VBox>
+</StackPane>

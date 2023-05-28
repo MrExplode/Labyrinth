@@ -1,0 +1,21 @@
+.cell:selected {
+  -fx-background-color: #3fba60;
+}
+
+@mixin pane-base {
+  -fx-background-radius: 10px;
+  -fx-border-radius: 10px;
+  -fx-background-color: rgba(255, 255, 255, 0.42);
+}
+
+@mixin padding($top: 10px, $right: 10px, $bottom: 10px, $left: 10px) {
+  -fx-border-insets: $top $right $bottom $left;
+  -fx-padding: $top $right $bottom $left;
+  -fx-background-insets: $top $right $bottom $left;
+}
+
+.content {
+  @include pane-base;
+  @include padding(0px, 25px, 0px, 25px);
+  -fx-max-width: 380px;
+}

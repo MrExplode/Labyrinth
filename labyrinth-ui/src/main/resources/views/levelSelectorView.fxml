@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.TextField?>
+<StackPane xmlns="http://javafx.com/javafx"
+           xmlns:fx="http://javafx.com/fxml"
+           fx:controller="me.sunstorm.labyrinth.ui.controller.SelectorController"
+           styleClass="blurred-gradient" stylesheets="/styles-compiled/settingsView.css"
+           prefHeight="600" prefWidth="960">
+    <VBox alignment="TOP_CENTER" styleClass="modal-background" maxHeight="500" maxWidth="505">
+        <Label text="%result.name" styleClass="padding-t-20" />
+        <TextField fx:id="nameField" maxWidth="200" styleClass="padding-y-10" />
+        <ScrollPane hbarPolicy="NEVER" vbarPolicy="NEVER" fitToWidth="true" fitToHeight="true" styleClass="hide-scroll-pane" minHeight="430">
+            <FlowPane fx:id="flowPane"/>
+        </ScrollPane>
+        <Label minWidth="30"/>
+        <Button fx:id="menuButton" prefHeight="46.0" prefWidth="100.0" onMouseClicked="#menuClicked" styleClass="basic-button" text="%navigation.back" />
+        <Label minWidth="30"/>
+    </VBox>
+</StackPane>

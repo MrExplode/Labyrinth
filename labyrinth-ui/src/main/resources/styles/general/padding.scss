@@ -1,0 +1,125 @@
+/* poor mans tailwind css */
+@mixin padding($top: 10px, $right: 10px, $bottom: 10px, $left: 10px) {
+    -fx-border-insets: $top $right $bottom $left;
+    -fx-padding: $top $right $bottom $left;
+    -fx-background-insets: $top $right $bottom $left;
+}
+
+/* all */
+.padding-10 {
+    @include padding;
+}
+
+.padding-15 {
+    @include padding(15px, 15px, 15px, 15px);
+}
+
+.padding-20 {
+    @include padding(20px, 20px, 20px, 20px);
+}
+
+.padding-25 {
+    @include padding(25px, 25px, 25px, 25px);
+}
+
+/* left */
+.padding-l-10 {
+    @include padding(0px, 0px, 0px, 10px);
+}
+
+.padding-l-15 {
+    @include padding(0px, 0px, 0px, 15px);
+}
+
+.padding-l-20 {
+    @include padding(0px, 0px, 0px, 20px);
+}
+
+.padding-l-25 {
+    @include padding(0px, 0px, 0px, 25px);
+}
+
+/* right */
+.padding-r-10 {
+    @include padding(0px, 10px, 0px, 0px);
+}
+
+.padding-r-15 {
+    @include padding(0px, 15px, 0px, 0px);
+}
+
+.padding-r-20 {
+    @include padding(0px, 20px, 0px, 0px);
+}
+
+.padding-r-25 {
+    @include padding(0px, 25px, 0px, 0px);
+}
+
+/* top */
+.padding-t-10 {
+    @include padding(10px, 0px, 0px, 0px);
+}
+
+.padding-t-15 {
+    @include padding(15px, 0px, 0px, 0px);
+}
+
+.padding-t-20 {
+    @include padding(20px, 0px, 0px, 0px);
+}
+
+.padding-t-25 {
+    @include padding(25px, 0px, 0px, 0px);
+}
+
+/* bottom */
+.padding-b-10 {
+    @include padding(0px, 0px, 10px, 0px);
+}
+
+.padding-b-15 {
+    @include padding(0px, 0px, 15px, 0px);
+}
+
+.padding-b-20 {
+    @include padding(0px, 0px, 20px, 0px);
+}
+
+.padding-b-25 {
+    @include padding(0px, 0px, 25px, 0px);
+}
+
+/* horizontal */
+.padding-x-10 {
+    @include padding(0px, 10px, 0px, 10px);
+}
+
+.padding-x-15 {
+    @include padding(0px, 105x, 0px, 15px);
+}
+
+.padding-x-20 {
+    @include padding(0px, 20px, 0px, 20px);
+}
+
+.padding-x-25 {
+    @include padding(0px, 25px, 0px, 25px);
+}
+
+/* vertical */
+.padding-y-10 {
+    @include padding(10px, 0px, 10px, 0px);
+}
+
+.padding-y-15 {
+    @include padding(15px, 0px, 15px, 0px);
+}
+
+.padding-y-20 {
+    @include padding(20px, 0px, 20px, 0px);
+}
+
+.padding-y-25 {
+    @include padding(25px, 0px, 25px, 0px);
+}

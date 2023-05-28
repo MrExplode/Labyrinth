@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import java.lang.String?>
+<?import javafx.scene.layout.HBox?>
+<StackPane xmlns="http://javafx.com/javafx"
+           xmlns:fx="http://javafx.com/fxml"
+           fx:controller="me.sunstorm.labyrinth.ui.controller.PostGameController"
+           styleClass="blurred-gradient" stylesheets="/styles-compiled/postGameView.css"
+           prefHeight="600" prefWidth="960">
+    <VBox alignment="TOP_CENTER" styleClass="modal-background" maxHeight="550" maxWidth="700">
+        <Label text="%result.title">
+            <styleClass>
+                <String fx:value="text-24" />
+                <String fx:value="padding-y-20" />
+            </styleClass>
+        </Label>
+        <VBox styleClass="content" alignment="CENTER" >
+            <Label fx:id="titleLabel">
+                <styleClass>
+                    <String fx:value="text-16" />
+                    <String fx:value="padding-t-10" />
+                </styleClass>
+            </Label>
+            <VBox alignment="CENTER_LEFT" maxWidth="350" styleClass="padding-10">
+                <Label fx:id="levelLabel" styleClass="text-16" />
+                <Label fx:id="stepsLabel" styleClass="text-16" />
+                <Label fx:id="durationLabel" styleClass="text-16" />
+            </VBox>
+        </VBox>
+        <TableView fx:id="highscoreTable" styleClass="padding-y-25" maxHeight="300">
+            <columns>
+                <TableColumn fx:id="rankColumn" text="%result.rank" sortable="false" resizable="false" reorderable="false" maxWidth="30" />
+                <TableColumn fx:id="nameColumn" text="%result.name" sortable="false" resizable="false" reorderable="false" />
+                <TableColumn fx:id="escapedColumn" text="%result.escaped" sortable="false" resizable="false" reorderable="false" />
+                <TableColumn fx:id="stepsColumn" text="%result.steps" sortable="false" resizable="false" reorderable="false" />
+                <TableColumn fx:id="startColumn" text="%result.start" sortable="false" reorderable="false"/>
+                <TableColumn fx:id="durationColumn" text="%result.duration" sortable="false" resizable="false" reorderable="false" />
+                <TableColumn fx:id="mapColumn" text="%result.map" sortable="false" resizable="false" reorderable="false" minWidth="150" />
+            </columns>
+        </TableView>
+        <Button mnemonicParsing="false" onMouseClicked="#menuClicked" prefHeight="27.0" prefWidth="96.0" text="%navigation.back" styleClass="basic-button"/>
+    </VBox>
+</StackPane>

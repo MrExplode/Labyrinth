@@ -1,0 +1,52 @@
+@font-face {
+    src: url("/fonts/Alata-Regular.ttf");
+}
+
+* {
+    -fx-font-family: "Alata";
+}
+
+.background-gradient {
+    -fx-background-color: linear-gradient(from 0% -15% to 100% 115%, #116446 0%, #116446 33%, #189668 33.2%, #189668 66%, #07e594 66.2%, #07e594 100%);
+}
+
+.blurred-gradient {
+    -fx-background-color: linear-gradient(from 0% -15% to 100% 115%, #116446 0%, #116446 24%, #189668 36%, #189668 60%, #07e594 72%, #07e594 100%);
+}
+
+.basic-button {
+    -fx-font-size: 18;
+    -fx-text-fill: rgb(255, 255, 255);
+    -fx-background-color: rgb(19, 162, 66);
+    -fx-border-radius: 7px;
+    -fx-background-radius: 7px;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.2), 10, 0, 4, 4);
+
+    &:hover {
+        -fx-translate-x: 1px;
+        -fx-translate-y: 2px;
+        -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.2), 10, 0, 2, 2);
+    }
+}
+
+@mixin modal-base($radius: 30px) {
+    -fx-background-color: rgba(255, 255, 255, 0.76);
+    -fx-border-radius: $radius;
+    -fx-background-radius: $radius;
+}
+
+.modal-background {
+    @include modal-base;
+}
+
+.modal-background-small {
+    @include modal-base(10px);
+}
+
+.hide-scroll-pane {
+    -fx-background-color: transparent;
+
+    & > * {
+        -fx-background-color: transparent;
+    }
+}
